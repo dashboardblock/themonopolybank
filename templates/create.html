@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/mystyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="/static/js/menu.js"></script>
+  <title>The Monopoly&reg; Bank</title>
+</head>
+<body>
+{% include 'header.html' %}
+<article>
+{% if qr_file %}
+      <center><h3><p style="color:green">{{ message }}</p></h3>
+      <img src="../{{ qr_file }}"/ width="300" height="300"></center>
+{% else %}
+<center>
+<h3>
+<form action="" method="POST">
+Choose your role:
+	<p>
+<input type="radio" name="role" id="option1" value="player" checked> Player </input><br>
+<input type="radio" name="role" id="option2" value="banker"> Banker </input><br>
+	</p>
+	<p>
+	    <input type="submit">
+	</p>
+</form></h3>
+{% endif %}
+</center>
+</article>	
+{% include 'footer.html' %}
+</body>
+</html>
+

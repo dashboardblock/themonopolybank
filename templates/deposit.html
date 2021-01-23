@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/mystyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="/static/js/menu.js"></script>
+  <title>The Monopoly&reg; Bank</title>
+</head>
+<body>
+{% include 'header.html' %}
+<article><center>
+Enter Algorand Wallet address:<br>
+    
+{% if message %}
+        <h3><p style="color:green">{{ message }}</p></h3>
+{% else %}
+    	    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    		{% endif %}
+   <h3><form action="" method="post">
+	    <input type="text" name="wallet" size="61"><br>
+<p>Choose your role:<br>
+<input type="radio" name="role" id="option1" value="player" checked> Player </input><br>
+<input type="radio" name="role" id="option2" value="banker"> Banker </input><br></p>
+	<p>
+	    <input type="submit">
+	</p>
+	</form></h3></center>
+
+Be sure that you already opt-in "Monopoly Money" to receive an asset.<br>
+If not, follow this instruction.<br><br> 
+
+1. Push button "Add new asset".<br> 
+2. Search asset ID "13080064" or Name "Monopoly Money".<br>
+3. Approve adding asset.<br>
+
+{% endif %}
+</article>
+{% include 'footer.html' %}
+</body>
+</html>
+

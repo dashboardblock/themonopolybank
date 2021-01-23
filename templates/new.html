@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/mystyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="/static/js/menu.js"></script>
+  <title>The Monopoly&reg; Bank</title>
+</head>
+<body>
+{% include 'header.html' %}
+<article>
+We build on <a href="https://www.algorand.com/">Algorand</a>&trade; - the world’s first open source, permissionless, pure proof-of-stake blockchain protocol!<br>
+<br>
+<p>Please follow the instruction in order.</p>
+<br>1. Download and install <a href="https://apps.apple.com/vn/app/algo-wallet/id1459898525">Algorand iOS Mobile Wallet</a> or <a href="https://play.google.com/store/apps/details?id=com.algorand.android">Algorand Android Mobile Wallet</a><br>
+2. Switch your wallet to TestNet. Open Algorand Wallet - Settings - Developer Settings - Node Settings - Select the Node "TestNet"<br>
+3. Push button "Add Account" and choose account type "Recover from Passphrase"<br>
+4. Name your account (i.e., Alice, Bob) and click on "QR" icon in the right corner of "Passphrase" field.<br>
+5. Scan QR-code<br><br>
+<b>OK, I am ready!<br>
+<a href="/create">Show me QR-code</a></b>
+</center>
+</article>
+{% include 'footer.html' %}
+</body>
+</html>
